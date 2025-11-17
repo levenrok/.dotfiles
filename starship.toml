@@ -27,11 +27,12 @@ style = 'bold fg:#86e1fc bg:#1d2230'
 
 [git_branch]
 symbol = ""
-format = 'at [[](fg:#ff9e64) $symbol $branch [](fg:#1d2230)]($style) '
+format = 'at [[](fg:#ff9e64) $symbol $branch ]($style)'
 style = "bold fg:#ff9e64 bg:#1d2230"
 
 [git_status]
-disabled = true
+format = '([$all_status$ahead_behind[](fg:#1d2230)]($style) )'
+style = "bold fg:#ff9e64 bg:#1d2230"
 
 [nix_shell]
 format = 'in [[░▒▓](fg:blue) $symbol$name$state [](fg:blue)]($style) '
