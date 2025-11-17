@@ -1,0 +1,14 @@
+[user]
+	email = levenrok@proton.me
+	name = Leven Rochana
+	github = levenrok
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[push]
+	recurseSubmodules = on-demand
+[submodule]
+	recurse = true
+[tag]
+	gpgSign = true

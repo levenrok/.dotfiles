@@ -1,0 +1,4 @@
+.netrw*
+
+# Vim Plugins
+plugged/*

@@ -1,0 +1,61 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[username]
+show_always = true
+format = '[[░▒▓](#82aaff) $user]($style)[@](bg:#1d2230)'
+style_user = 'bold fg:#82aaff bg:#1d2230'
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol$hostname [](fg:#c099ff)]($style) in '
+style = 'bold fg:#c099ff bg:#1d2230'
+
+[directory]
+format = '[[░▒▓](fg:#86e1fc) $path $read_only[](fg:#86e1fc)]($style) '
+style = 'bold fg:#86e1fc bg:#1d2230'
+
+[directory.substitutions]
+".dotfiles" = ""
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Videos" = ""
+"Developer" = "󰲋"
+
+[git_branch]
+symbol = ""
+format = 'at [[](fg:#ff9e64) $symbol $branch [](fg:#1d2230)]($style) '
+style = "bold fg:#ff9e64 bg:#1d2230"
+
+[git_status]
+disabled = true
+
+[nix_shell]
+format = 'in [[░▒▓](fg:blue) $symbol$name$state [](fg:blue)]($style) '
+impure_msg = ''
+pure_msg = ' 󰏓'
+style = 'bold fg:blue bg:#1d2230'
+
+[c]
+symbol = " "
+format = 'using [[](fg:#1d2230) $symbol($version(-$name) )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:149 bg:#1d2230'
+
+[nodejs]
+format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:green bg:#1d2230'
+
+[php]
+format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:147 bg:#1d2230'
+
+[python]
+symbol = ""
+format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:yellow bg:#1d2230'
+
+[cmd_duration]
+disabled = true
