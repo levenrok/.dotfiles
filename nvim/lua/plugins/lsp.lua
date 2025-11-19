@@ -11,6 +11,7 @@ return {
 				clangd = true,
 				lua_ls = true,
 				bashls = true,
+                jedi_language_server = true,
 				yamlls = true,
 				taplo = true,
 			}
@@ -70,9 +71,10 @@ return {
 			local null_ls = require("null-ls")
 			null_ls.setup({
 				sources = {
+					null_ls.builtins.formatting.nixpkgs_fmt,
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.shfmt,
-					null_ls.builtins.formatting.nixpkgs_fmt,
+					null_ls.builtins.formatting.black,
 				},
 			})
 
