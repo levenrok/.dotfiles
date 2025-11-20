@@ -11,6 +11,7 @@ return {
                 clangd = { offsetEncoding = { "utf-16" } },
                 lua_ls = true,
                 bashls = true,
+                gopls = true,
                 jedi_language_server = true,
                 yamlls = true,
                 taplo = true,
@@ -71,6 +72,7 @@ return {
                     null_ls.builtins.formatting.nixpkgs_fmt,
                     null_ls.builtins.formatting.stylua,
                     null_ls.builtins.formatting.shfmt,
+                    null_ls.builtins.formatting.gofmt,
                     null_ls.builtins.formatting.black,
                 },
             })
