@@ -2,6 +2,15 @@
 
 add_newline = true
 
+format = """
+$all\
+$fill\
+$git_branch\
+$git_status\
+$line_break\
+$character
+"""
+
 [username]
 show_always = true
 format = '[[░▒▓](#82aaff) $user]($style)[@](bg:#1d2230)'
@@ -27,7 +36,7 @@ style = 'bold fg:#86e1fc bg:#1d2230'
 
 [git_branch]
 symbol = ""
-format = 'at [[](fg:#ff9e64) $symbol $branch ]($style)'
+format = ' [[](fg:#ff9e64) $symbol $branch ]($style)'
 style = "bold fg:#ff9e64 bg:#1d2230"
 
 [git_status]
@@ -54,7 +63,7 @@ format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)
 style = 'bold fg:147 bg:#1d2230'
 
 [python]
-symbol = ""
+symbol = " "
 format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
 style = 'bold fg:yellow bg:#1d2230'
 
