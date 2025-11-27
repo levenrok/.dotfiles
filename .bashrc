@@ -138,6 +138,10 @@ setup_theme() {
 
 setup_theme
 
+# Go
+export GOPATH="$HOME/.local/bin/go"
+export PATH="$PATH:$GOPATH/bin"
+
 # fzf
 eval "$(fzf --bash)"
 
