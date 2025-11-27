@@ -8,13 +8,14 @@ return {
         config = function()
             local servers = {
                 nixd = true,
-                clangd = { offsetEncoding = { "utf-16" } },
                 lua_ls = true,
                 bashls = true,
-                gopls = true,
-                jedi_language_server = true,
                 yamlls = true,
                 taplo = true,
+                clangd = { offsetEncoding = { "utf-16" } },
+                cmake = true,
+                gopls = true,
+                jedi_language_server = true,
             }
 
             local capabilities = require("blink.cmp").get_lsp_capabilities()
