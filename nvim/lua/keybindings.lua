@@ -13,8 +13,12 @@ vim.keymap.set("n", "<C-f>", builtin.live_grep, { desc = "Find" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll Up" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down" })
 
-vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Comment Line" })
-vim.keymap.set("v", "<C-_>", "gc", { remap = true, desc = "Comment Selected Lines" })
+-- For older terminals emulators
+-- vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Comment Line" })
+-- vim.keymap.set("v", "<C-_>", "gc", { remap = true, desc = "Comment Selected Lines" })
+
+vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment Line" })
+vim.keymap.set("v", "<C-/>", "gc", { remap = true, desc = "Comment Selected Lines" })
 
 vim.keymap.set("n", "<leader>`", "<Cmd>terminal<CR>", { desc = "Open Terminal" })
 
