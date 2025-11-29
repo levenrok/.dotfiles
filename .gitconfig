@@ -2,6 +2,7 @@
 	email = levenrok@proton.me
 	name = Leven Rochana
 	github = levenrok
+	signingKey = 0CFBE7F8B1868B42
 [init]
 	defaultBranch = main
 [commit]
