@@ -1,0 +1,7 @@
+cursor-style = bar
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
+shell-integration-features = no-cursor
+theme = light:TokyoNight Day,dark:TokyoNight
+window-height = 28
+window-width = 132
