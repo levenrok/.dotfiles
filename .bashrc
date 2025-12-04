@@ -104,7 +104,7 @@ export PATH="$PATH:$HOME/.local/bin"
 system_is_dark() {
     condition=$(gsettings get org.gnome.desktop.interface color-scheme)
     condition=$(echo "$condition" | tr -d "[:space:]'")
-    if [ $condition == "prefer-dark" ]; then
+    if [ "$condition" == "prefer-dark" ]; then
         return 0
     else
         return 1
@@ -145,8 +145,12 @@ export PATH="$PATH:$GOPATH/bin"
 # fzf
 eval "$(fzf --bash)"
 
-# Direnv
+# direnv
 eval "$(direnv hook bash)"
 
-# Starship
+# starship
 eval "$(starship init bash)"
+
+# zoxide
+eval "$(zoxide init --cmd zd bash)"
+export _ZO_ECHO=1
