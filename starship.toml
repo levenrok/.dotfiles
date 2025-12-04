@@ -54,6 +54,11 @@ symbol = " "
 format = 'using [[](fg:#1d2230) $symbol($version(-$name) )[ ](fg:#1d2230)]($style)'
 style = 'bold fg:149 bg:#1d2230'
 
+[cmake]
+symbol = " "
+format = 'via [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:blue bg:#1d2230'
+
 [nodejs]
 format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
 style = 'bold fg:green bg:#1d2230'
