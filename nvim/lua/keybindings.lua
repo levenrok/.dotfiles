@@ -7,6 +7,7 @@ vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find Files" })
 vim.keymap.set("n", "<leader>p", builtin.buffers, { desc = "File Buffers" })
 
 vim.keymap.set("n", "<leader>t", ":<C-u>tabnew<Space>", { desc = "Edit a File in a Tab" })
+vim.keymap.set("n", "<leader><Tab>", "<Cmd>tabnext<CR>", { desc = "Switch between Open Tabs" })
 vim.keymap.set("n", "<Bar>", ":<C-u>vnew<Space>", { desc = "Edit a File in a Vertical Split" })
 
 vim.keymap.set("n", "<C-f>", builtin.live_grep, { desc = "Find" })
