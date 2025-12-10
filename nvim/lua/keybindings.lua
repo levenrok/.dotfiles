@@ -22,4 +22,4 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down" })
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment Line" })
 vim.keymap.set("v", "<C-/>", "gc", { remap = true, desc = "Comment Selected Lines" })
 
-vim.keymap.set("n", "<C-h>", builtin.help_tags, { desc = "Help" })
+vim.keymap.set("n", "<leader><F1>", builtin.help_tags, { desc = "Help" })

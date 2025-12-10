@@ -1,7 +1,10 @@
 return {
 	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"rafamadriz/friendly-snippets",
+		},
 		version = "1.*",
 
 		---@module 'blink.cmp'
