@@ -1,3 +1,5 @@
+[core]
+    sshCommand = ssh -i ~/.ssh/github -o IdentitiesOnly=yes
 [user]
 	email = levenrok@proton.me
 	name = Leven Rochana

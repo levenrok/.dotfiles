@@ -1,0 +1,10 @@
+configuration {
+    kb-row-up: "Up,Control+p";
+    kb-row-down: "Down,Control+n";
+
+    kb-accept-entry: "Return,KP_Enter,Control+y";
+
+    kb-move-char-back: "Control+b";
+    kb-remove-char-back: "BackSpace";
+    kb-move-char-forward: "Control+f";
+}

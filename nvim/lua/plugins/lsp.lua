@@ -20,6 +20,7 @@ return {
 				taplo = true,
 				dockerls = true,
 				nginx_language_server = true,
+				jsonls = true,
 				clangd = { offsetEncoding = { "utf-16" } },
 				cmake = true,
 				gopls = true,

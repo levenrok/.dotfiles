@@ -1,0 +1,127 @@
+:root {
+  --cc-bg: transparent;
+  --border-radius: 22px;
+  --padding: calc(var(--border-radius) / 2);
+
+  --widget-background: rgba(17, 17, 27, 0.9);
+
+  --noti-bg-alpha: 0.6;
+
+  --close-button-hover: rgb(247, 118, 142);
+
+  --widget-button-hover: rgb(187, 154, 247);
+  --widget-button-checked: rgb(122, 162, 247);
+
+  --dnd-checked: rgb(255, 158, 100);
+}
+
+* {
+  font-family: "JetBrainsMono NFM SemiBold";
+}
+
+.control-center {
+  border-radius: var(--border-radius);
+}
+
+.control-center-list-placeholder {
+  padding: var(--border-radius);
+}
+
+.widget-title > button:hover {
+  background: var(--close-button-hover);
+}
+
+/* Notifications */
+.notification-group {
+  border-radius: var(--border-radius);
+  padding: 8px;
+}
+
+.notification-group:focus {
+  background: transparent;
+  outline: none;
+}
+
+.notification-group-headers,
+.notification-group-buttons {
+  padding: 6px 0;
+}
+
+.notification {
+  background: var(--widget-background);
+}
+
+/* .notification-default-action:hover, */
+/* .notification-action:hover {} */
+
+.close-button:hover {
+  background: var(--close-button-hover);
+}
+
+/* Widgets */
+.widgets > .widget,
+.widget-mpris > carouselindicatordots,
+.widget-mpris > box > button {
+  background: var(--widget-background);
+  border-radius: var(--border-radius);
+  padding: calc(var(--border-radius) / 2);
+  border: var(--border);
+}
+
+/* Do Not Disturb */
+.widget.widget-dnd > switch:checked {
+  background: var(--dnd-checked);
+}
+
+/* Action Buttons */
+.widget-buttons-grid > flowbox > flowboxchild {
+  background: transparent;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  margin: 2px 0px;
+  font-size: 20px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: var(--widget-button-hover);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+  background: var(--widget-button-checked);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover:checked {
+  background: var(--widget-button-hover);
+}
+
+/* Media Player */
+.widget.widget-mpris {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
+
+.widget.widget-mpris > carouselindicatordots {
+  --dots-padding: 4px;
+  padding: var(--dots-padding);
+  padding-left: var(--dots-padding);
+  padding-right: calc(6px + var(--dots-padding));
+  margin: var(--padding) 0 0 0;
+}
+
+.widget-mpris > box > button:hover {
+  /* background: rgba(46, 46, 46, 1); */
+  background: var(--widget-button-checked);
+}
+
+.widget-mpris-player {
+  box-shadow: none;
+  border: var(--border);
+  margin: 0 var(--padding);
+}
+
+.widget-mpris-player:only-child {
+  margin: 0;
+}
