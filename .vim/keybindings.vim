@@ -8,7 +8,6 @@ nnoremap <C-p> :Files<CR>
 nnoremap <leader>f :Rg<Space>
 
 " Buffers
-nnoremap <leader>t :edit<space>
 nnoremap <leader>p :Buffers<CR>
 
 " Center on next/previous search result
@@ -20,8 +19,10 @@ nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
 
 " Line commenting (Ctrl-/)
-nnoremap <C-_> :Commentary<CR>
-vnoremap <C-_> :Commentary<CR>
+" nnoremap <C-_> :Commentary<CR>
+" vnoremap <C-_> :Commentary<CR>
+nnoremap <C-/> :Commentary<CR>
+vnoremap <C-/> :Commentary<CR>
 
 " File indentation
 nnoremap <leader>i gg=G<C-o><C-o>
@@ -34,8 +35,6 @@ nnoremap <S-F12> :LspShowReferences<CR>
 nnoremap K  :LspHover<CR>
 nnoremap <F8> :LspNextDiagnostic<CR>
 nnoremap <S-F8> :LspPreviousDiagnostic<CR>
-
-nnoremap <leader>v :MarkdownPreviewToggle<CR>
 
 " Open terminal
 nnoremap <leader>` :terminal<CR>

@@ -26,7 +26,7 @@ return {
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				auto_install = true,
-				highlight = { enable = true },
+				highlight = { enable = true, disable = { "just" } },
 				indent = { enable = true },
 			})
 		end,

@@ -51,9 +51,6 @@
   background: var(--widget-background);
 }
 
-/* .notification-default-action:hover, */
-/* .notification-action:hover {} */
-
 .close-button:hover {
   background: var(--close-button-hover);
 }
@@ -112,8 +109,7 @@
 }
 
 .widget-mpris > box > button:hover {
-  /* background: rgba(46, 46, 46, 1); */
-  background: var(--widget-button-checked);
+  background: var(--widget-button-hover);
 }
 
 .widget-mpris-player {

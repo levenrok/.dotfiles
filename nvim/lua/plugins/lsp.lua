@@ -21,6 +21,7 @@ return {
 				dockerls = true,
 				nginx_language_server = true,
 				jsonls = true,
+				hyprls = true,
 				clangd = { offsetEncoding = { "utf-16" } },
 				cmake = true,
 				gopls = true,
@@ -72,6 +73,10 @@ return {
 				vim.diagnostic.config({ virtual_text = true, virutal_lines = true }),
 			})
 		end,
+	},
+	{
+		"NoahTheDuke/vim-just",
+		ft = { "just" },
 	},
 	{
 		"nvimtools/none-ls.nvim",
