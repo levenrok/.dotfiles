@@ -13,7 +13,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrainsMono Nerd Font Mono 10";
+    font:                        "DepartureMono Nerd Font Mono 10";
     background:                  #11111B;
     background-alt:              #313244;
     foreground:                  #EFF1F5;
@@ -147,7 +147,7 @@ element {
     cursor:                      pointer;
 }
 element selected.normal {
-    font:                        "JetBrainsMono Nerd Font Mono 8";
+    font:                        "DepartureMono Nerd Font Mono 8";
     background-color:            @active;
     text-color:                  @background;
 }
