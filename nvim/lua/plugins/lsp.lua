@@ -9,6 +9,7 @@ return {
 				nixd = true,
 				lua_ls = true,
 				bashls = true,
+
 				yamlls = {
 					settings = {
 						schemas = {
@@ -18,14 +19,16 @@ return {
 					},
 				},
 				taplo = true,
-				dockerls = true,
-				nginx_language_server = true,
 				jsonls = true,
-				hyprls = true,
-				clangd = { offsetEncoding = { "utf-16" } },
+
 				cmake = true,
+				docker_language_server = true,
+				nginx_language_server = true,
+				hyprls = true,
+
+				clangd = { offsetEncoding = { "utf-16" } },
+				rust_analyzer = true,
 				gopls = true,
-				jedi_language_server = true,
 			}
 
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
@@ -91,8 +94,8 @@ return {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.shfmt,
 					null_ls.builtins.formatting.clang_format,
+					null_ls.builtins.formatting.rustfmt,
 					null_ls.builtins.formatting.gofmt,
-					null_ls.builtins.formatting.black,
 				},
 				on_attach = function(client, bufnr)
 					if client.supports_method("textDocument/formatting") then

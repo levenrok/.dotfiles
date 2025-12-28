@@ -42,6 +42,12 @@ return {
 		lazy = false,
 	},
 	{
+		"m4xshen/autoclose.nvim",
+		config = function()
+			require("autoclose").setup()
+		end,
+	},
+	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
 			require("colorizer").setup()
