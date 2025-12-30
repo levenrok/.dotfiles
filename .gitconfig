@@ -1,5 +1,5 @@
 [core]
-    sshCommand = ssh -i ~/.ssh/github -o IdentitiesOnly=yes
+    sshCommand = ssh -i ~/.ssh/git-remote -o IdentitiesOnly=yes
 [user]
 	email = levenrok@proton.me
 	name = Leven Rochana

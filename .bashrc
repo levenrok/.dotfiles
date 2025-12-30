@@ -97,6 +97,9 @@ if ! shopt -oq posix; then
 	fi
 fi
 
+export EDITOR=nvim
+export MANPAGER="nvim +Man!"
+
 # Local Binaries
 export PATH="$PATH:$HOME/.local/bin"
 

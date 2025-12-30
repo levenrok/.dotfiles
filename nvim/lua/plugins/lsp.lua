@@ -26,6 +26,12 @@ return {
 				nginx_language_server = true,
 				hyprls = true,
 
+				html = true,
+				cssls = true,
+				ts_ls = true,
+				intelephense = true,
+				laravel_ls = true,
+
 				clangd = { offsetEncoding = { "utf-16" } },
 				rust_analyzer = true,
 				gopls = true,
