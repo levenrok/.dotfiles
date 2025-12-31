@@ -6,10 +6,15 @@ return {
 		},
 		config = function()
 			local servers = {
+				html = true,
+				cssls = true,
+				ts_ls = true,
+				intelephense = true,
+				laravel_ls = true,
+
 				nixd = true,
 				lua_ls = true,
 				bashls = true,
-
 				yamlls = {
 					settings = {
 						schemas = {
@@ -21,20 +26,9 @@ return {
 				taplo = true,
 				jsonls = true,
 
-				cmake = true,
 				docker_language_server = true,
 				nginx_language_server = true,
 				hyprls = true,
-
-				html = true,
-				cssls = true,
-				ts_ls = true,
-				intelephense = true,
-				laravel_ls = true,
-
-				clangd = { offsetEncoding = { "utf-16" } },
-				rust_analyzer = true,
-				gopls = true,
 			}
 
 			local capabilities = require("blink.cmp").get_lsp_capabilities()

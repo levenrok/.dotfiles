@@ -141,6 +141,9 @@ setup_theme() {
 
 setup_theme
 
+# Emacs
+export PATH="$PATH:$HOME/.config/emacs/bin"
+
 # Go
 export GOPATH="$HOME/.local/bin/go"
 export PATH="$PATH:$GOPATH/bin"
