@@ -5,7 +5,6 @@
 
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 17)
       doom-variable-pitch-font (font-spec :family "SF Pro Display" :size 14))
-(setq doom-theme 'doom-tokyo-night)
 
 (setq display-line-numbers-type 'relative)
 
@@ -18,7 +17,7 @@
 (map! :desc "Toggle VTerm"
       :n "C-`" #'+vterm/toggle)
 (map! :desc "Search for files in the current directory"
-      :n "C-p" #'find-file)
+      :n "C-p" #'projectile-find-file)
 (map! :desc "Search for text in the current directory"
       :n "C-f" #'+default/search-project)
 
@@ -45,7 +44,6 @@
 
 ;; Packages
 (after! treemacs
-  (setq treemacs-persist-file nil)
   (setq treemacs-default-visit-action #'treemacs-visit-node-close-treemacs))
 
 (custom-set-faces
@@ -56,3 +54,27 @@
  '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.3))))
  '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.2))))
  '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.1)))))
+
+;; Custom Functions
+(defun synchronize-theme ()
+  (let* ((light-theme 'doom-nord-light)
+         (dark-theme 'doom-tokyo-night)
+         (start-hour 7)
+         (end-hour 18)
+         ;; Get the hour directly as an integer
+         (hour (decoded-time-hour (decode-time)))
+         ;; Simplified logic: is it between 7:00 and 18:00?
+         (next-theme (if (and (>= hour start-hour) (< hour end-hour))
+                         light-theme
+                       dark-theme)))
+
+    ;; Only act if the theme actually needs to change
+    (unless (eq doom-theme next-theme)
+      ;; Disable all current themes to prevent color bleeding
+      (mapc #'disable-theme custom-enabled-themes)
+      (setq doom-theme next-theme)
+      ;; The 't' arg skips the "Is this theme safe?" prompt
+      (load-theme next-theme t))))
+
+;; Runs every 15 minutes
+(run-with-timer 0 900 'synchronize-theme)
