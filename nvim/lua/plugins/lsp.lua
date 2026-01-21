@@ -9,12 +9,16 @@ return {
 				html = true,
 				cssls = true,
 				ts_ls = true,
+				svelte = true,
+				tailwindcss = true,
+				eslint = true,
 				intelephense = true,
 				laravel_ls = true,
 
 				nixd = true,
 				lua_ls = true,
 				bashls = true,
+				basedpyright = true,
 				yamlls = {
 					settings = {
 						schemas = {
@@ -90,12 +94,12 @@ return {
 
 			null_ls.setup({
 				sources = {
+					null_ls.builtins.formatting.eslint,
+					null_ls.builtins.formatting.prettier,
 					null_ls.builtins.formatting.nixpkgs_fmt,
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.shfmt,
-					null_ls.builtins.formatting.clang_format,
-					null_ls.builtins.formatting.rustfmt,
-					null_ls.builtins.formatting.gofmt,
+					null_ls.builtins.formatting.black,
 				},
 				on_attach = function(client, bufnr)
 					if client.supports_method("textDocument/formatting") then
