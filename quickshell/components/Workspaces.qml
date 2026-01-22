@@ -29,6 +29,15 @@ RowLayout {
         return workspaceTags[id];
     }
 
+    function truncateWords(str, numWords, suffix) {
+        suffix = suffix || "...";
+        var words = str.split(" ");
+        if (words.length > numWords) {
+            return words.slice(0, numWords).join(" ") + suffix;
+        }
+        return str;
+    }
+
     Process {
         id: windowProc
         command: ["sh", "-c", "hyprctl activewindow -j | jq -r '.initialTitle // empty'"]
@@ -129,7 +138,7 @@ RowLayout {
     Separator { config: config }
 
     Text {
-        text: activeWindow
+        text: truncateWords(activeWindow, 4);
         color: config.colFg
         font.pixelSize: config.fontSize
         font.family: config.fontFamily
