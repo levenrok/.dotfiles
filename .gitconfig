@@ -15,3 +15,6 @@
 	recurse = true
 [tag]
 	gpgSign = true
+[alias]
+diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+unstage = restore --staged
