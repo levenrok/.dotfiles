@@ -54,6 +54,25 @@ symbol = " "
 format = 'using [[](fg:#1d2230) $symbol($version(-$name) )[ ](fg:#1d2230)]($style)'
 style = 'bold fg:149 bg:#1d2230'
 
+[rust]
+symbol = "󱘗 "
+format = 'using [[](fg:#1d2230) $symbol($version(-$name) )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:red bg:#1d2230'
+
+[zig]
+symbol = " "
+format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:yellow bg:#1d2230'
+
+[python]
+symbol = " "
+format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:yellow bg:#1d2230'
+
+[package]
+format = 'is [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:208 bg:#1d2230'
+
 [cmake]
 symbol = " "
 format = 'via [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
@@ -62,15 +81,6 @@ style = 'bold fg:blue bg:#1d2230'
 [nodejs]
 format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
 style = 'bold fg:green bg:#1d2230'
-
-[php]
-format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
-style = 'bold fg:147 bg:#1d2230'
-
-[python]
-symbol = " "
-format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
-style = 'bold fg:yellow bg:#1d2230'
 
 [cmd_duration]
 disabled = true
