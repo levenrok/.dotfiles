@@ -3,7 +3,7 @@
 (setq user-full-name "Leven Rochana"
       user-mail-address "levenrok@proton.me")
 
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 17)
+(setq doom-font (font-spec :family "BlexMono Nerd Font SemiBold" :size 17)
       doom-variable-pitch-font (font-spec :family "SF Pro Display" :size 14))
 
 (setq display-line-numbers-type 'relative)
@@ -20,10 +20,12 @@
       :n "C-p" #'projectile-find-file)
 (map! :desc "Search for text in the current directory"
       :n "C-f" #'+default/search-project)
+(map! :desc "Comment/Uncomment lines"
+      :nvi "C-/" #'evilnc-comment-or-uncomment-lines)
 
 
 ;; Org Mode
-(setq org-directory "~/Developer/Org")
+(setq org-directory "~/Developer/Docs/Org")
 
 (custom-theme-set-faces!
   'doom-tokyo-night
