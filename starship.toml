@@ -82,5 +82,10 @@ style = 'bold fg:blue bg:#1d2230'
 format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
 style = 'bold fg:green bg:#1d2230'
 
+[bun]
+symbol = " "
+format = 'using [[](fg:#1d2230) $symbol($version )[ ](fg:#1d2230)]($style)'
+style = 'bold fg:red bg:#1d2230'
+
 [cmd_duration]
 disabled = true
