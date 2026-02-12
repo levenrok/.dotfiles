@@ -10,6 +10,7 @@ return {
 				cssls = true,
 				ts_ls = true,
 				svelte = true,
+                astro = true,
 				tailwindcss = true,
 				eslint = true,
 				intelephense = true,

@@ -39,7 +39,14 @@ return {
 			"MunifTanjim/nui.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
-		lazy = false,
+        lazy = false,
+        opts = {
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                },
+            },
+        },
 	},
 	{
 		"m4xshen/autoclose.nvim",
