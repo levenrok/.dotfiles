@@ -144,6 +144,13 @@ setup_theme
 # Emacs
 export PATH="$PATH:$HOME/.config/emacs/bin"
 
+# Zig
+source ~/.local/bin/_zig.bash
+
+# Rust
+export RUSTPATH="$HOME/.cargo/bin"
+export PATH="$PATH:$RUSTPATH"
+
 # Go
 export GOPATH="$HOME/.local/bin/go"
 export PATH="$PATH:$GOPATH/bin"
