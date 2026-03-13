@@ -15,6 +15,13 @@
 	recurse = true
 [tag]
 	gpgSign = true
+[sendemail]
+    smtpserver = smtp.gmail.com
+    smtpuser = levrotech.googl@gmail.com
+    smtpencryption = tls
+    smtpserverport = 587
+[credential]
+	helper = store
 [alias]
 diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
 unstage = restore --staged
