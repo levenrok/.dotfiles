@@ -8,3 +8,4 @@ vim.cmd("set tabstop=4")
 vim.cmd("set smartindent")
 
 vim.opt.clipboard = "unnamedplus"
+vim.o.exrc = true
