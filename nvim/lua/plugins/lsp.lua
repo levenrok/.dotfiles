@@ -6,20 +6,67 @@ return {
 		},
 		config = function()
 			local servers = {
+				--- Web Development
 				html = true,
 				cssls = true,
-				ts_ls = true,
+				ts_ls = {
+					settings = {
+						javascript = {
+							inlayHints = {
+								includeInlayEnumMemberValueHints = true,
+								includeInlayFunctionLikeReturnTypeHints = true,
+								includeInlayFunctionParameterTypeHints = true,
+								includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+								includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+								includeInlayPropertyDeclarationTypeHints = true,
+								includeInlayVariableTypeHints = false,
+							},
+						},
+
+						typescript = {
+							inlayHints = {
+								includeInlayEnumMemberValueHints = true,
+								includeInlayFunctionLikeReturnTypeHints = true,
+								includeInlayFunctionParameterTypeHints = true,
+								includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+								includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+								includeInlayPropertyDeclarationTypeHints = true,
+								includeInlayVariableTypeHints = false,
+							},
+						},
+					},
+				},
 				svelte = true,
-                astro = true,
+				astro = true,
 				tailwindcss = true,
 				eslint = true,
-				intelephense = true,
-				laravel_ls = true,
 
+				--- Systems Programming
+				clangd = true,
+				rust_analyzer = true,
+				gopls = {
+					settings = {
+						gopls = {
+							hints = {
+								assignVariableTypes = true,
+								compositeLiteralFields = true,
+								constantValues = true,
+								functionTypeParameters = true,
+								parameterNames = true,
+								rangeVariableTypes = true,
+							},
+							staticcheck = true,
+						},
+					},
+				},
+
+				--- Scripting
 				nixd = true,
 				lua_ls = true,
 				bashls = true,
 				basedpyright = true,
+
+				--- Configuration
 				yamlls = {
 					settings = {
 						schemas = {
@@ -35,7 +82,6 @@ return {
 				nginx_language_server = true,
 				hyprls = true,
 			}
-
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 			for name, config in pairs(servers) do
@@ -87,10 +133,6 @@ return {
 		end,
 	},
 	{
-		"NoahTheDuke/vim-just",
-		ft = { "just" },
-	},
-	{
 		"nvimtools/none-ls.nvim",
 		event = "VeryLazy",
 		config = function()
@@ -99,11 +141,20 @@ return {
 
 			null_ls.setup({
 				sources = {
+					--- Web Development
 					null_ls.builtins.formatting.prettier,
+
+					--- Scripting
 					null_ls.builtins.formatting.nixpkgs_fmt,
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.shfmt,
 					null_ls.builtins.formatting.black,
+					null_ls.builtins.formatting.rubocop,
+
+					--- Systems Programming
+					null_ls.builtins.formatting.clang_format,
+					null_ls.builtins.formatting.rustfmt,
+					null_ls.builtins.formatting.gofmt,
 				},
 				on_attach = function(client, bufnr)
 					if client.supports_method("textDocument/formatting") then
