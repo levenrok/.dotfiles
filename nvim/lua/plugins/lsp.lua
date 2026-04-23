@@ -118,9 +118,9 @@ return {
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
 
                 vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { buffer = 0 })
-                vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, { buffer = 0 })
+                vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, { buffer = 0 })
                 vim.keymap.set("n", "<leader>o", builtin.lsp_document_symbols, { buffer = 0 })
-                vim.keymap.set("n", "<C-i>", function()
+                vim.keymap.set("n", "<leader>i", function()
                     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
                 end)
                 vim.keymap.set("n", "<C-m>", function()
