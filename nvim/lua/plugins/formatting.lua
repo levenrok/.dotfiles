@@ -6,7 +6,8 @@ return {
 
         conform.setup({
             formatters_by_ft = {
-                nix = { "nixfmt" }
+                nix = { "nixfmt" },
+                python = { "ruff_organize_imports", "ruff_format" },
             },
             format_after_save = {
                 lsp_format = "fallback",
