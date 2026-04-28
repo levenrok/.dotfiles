@@ -16,6 +16,18 @@ return {
                 options = {
                     theme = "tokyonight",
                 },
+                sections = {
+                    lualine_a = {
+                        {
+                            'mode',
+                            fmt = function(res)
+                                local reg = vim.fn.reg_recording()
+                                if reg == "" then return res end
+                                return "RECORDING @" .. reg
+                            end
+                        }
+                    },
+                }
             })
         end,
     },
