@@ -57,6 +57,19 @@
  '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.2))))
  '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.1)))))
 
+(after! lsp-mode
+  (setq lsp-inlay-hint-enable t))
+
+(use-package! lsp-pyright
+  :after lsp-mode
+  :custom
+  (lsp-pyright-langserver-command "basedpyright")
+  :hook
+  ((python-mode python-ts-mode) . (lambda ()
+                                    (require 'lsp-pyright)
+                                    (lsp-deferred))))
+
+
 ;; Custom Functions
 (defun synchronize-theme ()
   (let* ((light-theme 'doom-nord-light)
