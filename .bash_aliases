@@ -6,9 +6,7 @@ alias tree='eza -T'
 
 alias _='cd -'
 alias ..='echo cd ..; cd ..'
-alias dotfiles='echo cd \~/.dotfiles; cd ~/.dotfiles'
 
 alias open='xdg-open . & disown'
 alias fedit='nvim $(fzf --preview="bat --color=always {}")'
-alias session='tmux attach'
 alias neofetch=fastfetch
